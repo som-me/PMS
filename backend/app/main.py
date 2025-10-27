@@ -16,8 +16,15 @@ app.include_router(tasks.router)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # or ["http://localhost:3000"] for security
+    allow_origins=[
+        "https://pmsfront.netlify.app/",  # your actual frontend URL
+        "http://localhost:3000"  # still keep this for local testing
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+def root():
+    return {"message": "Backend is live!"}
