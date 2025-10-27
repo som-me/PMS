@@ -14,7 +14,8 @@ export default function AuthForm() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
 
-    const BACKEND_URL = "http://127.0.0.1:8000";
+    const BACKEND_URL = "https://pms-backend-cmdn.onrender.com";
+
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
