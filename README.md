@@ -1,4 +1,4 @@
-# 🧩 Project Management System (PMS)
+# 🧩 Project Management System (PMS) - BY SOUMYA RANJAN MEHER
 
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-13+-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
