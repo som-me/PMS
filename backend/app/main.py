@@ -3,6 +3,7 @@ from app.db.base import Base
 from app.db.session import engine
 from app.routers import auth, projects, tasks
 from app import models
+from sqlalchemy import text
 from fastapi.middleware.cors import CORSMiddleware
 
 # Create DB tables
@@ -32,3 +33,13 @@ def root():
 @app.get("/api/auth/test")
 def test():
     return {"message": "Backend connection successful!"}
+
+
+@app.get("/test-db")
+def test_db():
+    try:
+        with engine.connect() as conn:
+            result = conn.execute(text("SELECT NOW();"))
+            return {"message": "✅ Database connection successful!", "time": str(result.scalar())}
+    except Exception as e:
+        return {"error": str(e)}
