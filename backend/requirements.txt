@@ -1,12 +1,33 @@
+# Core FastAPI stack
 fastapi==0.115.11
 uvicorn[standard]==0.34.0
-sqlalchemy==2.0.44
-alembic==1.17.0
-psycopg2-binary==2.9.11
-python-jose[cryptography]==3.5.0
-passlib[bcrypt]==1.7.4
+python-dotenv==1.0.1
 pydantic==2.11.1
-pydantic-settings==2.11.0
-python-dotenv==1.1.0
-email-validator==2.3.0
-slowapi==0.1.9
+pydantic-settings==2.1.0
+email-validator==2.2.0
+
+# Database + ORM
+SQLAlchemy==2.0.44
+psycopg2-binary==2.9.11
+alembic==1.13.2
+
+# Auth + Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+
+# Utilities
+requests==2.32.3
+python-multipart==0.0.20
+
+# Rate limiting, CORS, async, etc.
+starlette==0.46.1
+anyio==4.9.0
+typing-extensions==4.12.2
+
+# Optional (safe extras)
+click==8.1.7
+jinja2==3.1.4
+
+# For Render deployment compatibility
+gunicorn==23.0.0
